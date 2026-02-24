@@ -1,0 +1,50 @@
+[build-system]
+requires = [&quot;hatchling&quot;]
+build-backend = &quot;hatchling.build&quot;
+
+[project]
+name = &quot;nza-arithmetic&quot;
+dynamic = [&quot;version&quot;]
+description = &quot;N-Zero Arithmetic (NZA): Mathematical framework distinguishing local labels from infinite universe total. No true zeros or negatives.&quot;
+readme = &quot;README.md&quot;
+requires-python = &quot;&gt;=3.8&quot;
+license = {file = &quot;LICENSE&quot;}
+authors = [
+    {name = &quot;Kentaro &amp; Sukezo&quot;, email = &quot;kenoidart@gmail.com&quot;},
+]
+classifiers = [
+    &quot;Development Status :: 4 - Beta&quot;,
+    &quot;Intended Audience :: Science/Research&quot;,
+    &quot;License :: OSI Approved :: MIT License&quot;,
+    &quot;Programming Language :: Python :: 3&quot;,
+    &quot;Programming Language :: Python :: 3 :: Only&quot;,
+    &quot;Topic :: Scientific/Engineering :: Mathematics&quot;,
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    &quot;pytest&gt;=7.0&quot;,
+    &quot;black&quot;,
+    &quot;mypy&quot;,
+]
+
+[project.urls]
+Homepage = &quot;https://ampfinity.pages.dev/nza-paper&quot;
+Repository = &quot;https://github.com/super-morphist-sukezo/nza-arithmetic&quot;
+Documentation = &quot;https://nza-arithmetic.readthedocs.io&quot;
+&quot;Paper (HTML)&quot; = &quot;https://github.com/super-morphist-sukezo/nza-arithmetic/blob/main/docs/nza-full-thesis-v4_super-morphist-sukezo.md&quot;
+Thesis = &quot;https://arxiv.org/abs/placeholder&quot;  # later
+
+[tool.hatch.version]
+path = &quot;src/nza/__init__.py&quot;
+
+[tool.hatch.build.targets.sdist]
+include = [
+    &quot;src/nza&quot;,
+    &quot;README.md&quot;,
+    &quot;LICENSE&quot;,
+]
+
+[tool.hatch.build.targets.wheel]
+packages = [&quot;src/nza&quot;]
