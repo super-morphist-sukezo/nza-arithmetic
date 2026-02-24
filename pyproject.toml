@@ -1,50 +1,50 @@
 [build-system]
-requires = [&quot;hatchling&quot;]
-build-backend = &quot;hatchling.build&quot;
+requires = ["hatchling"]
+build-backend = "hatchling.build"
 
 [project]
-name = &quot;nza-arithmetic&quot;
-dynamic = [&quot;version&quot;]
-description = &quot;N-Zero Arithmetic (NZA): Mathematical framework distinguishing local labels from infinite universe total. No true zeros or negatives.&quot;
-readme = &quot;README.md&quot;
-requires-python = &quot;&gt;=3.8&quot;
-license = {file = &quot;LICENSE&quot;}
+name = "nza-arithmetic"
+dynamic = ["version"]
+description = "N-Zero Arithmetic (NZA): Mathematical framework distinguishing local labels from infinite universe total. No true zeros or negatives."
+readme = "README.md"
+requires-python = "&gt;=3.8"
+license = {file = "LICENSE"}
 authors = [
-    {name = &quot;Kentaro &amp; Sukezo&quot;, email = &quot;kenoidart@gmail.com&quot;},
+    {name = "Kentaro &amp; Sukezo", email = "kenoidart@gmail.com"},
 ]
 classifiers = [
-    &quot;Development Status :: 4 - Beta&quot;,
-    &quot;Intended Audience :: Science/Research&quot;,
-    &quot;License :: OSI Approved :: MIT License&quot;,
-    &quot;Programming Language :: Python :: 3&quot;,
-    &quot;Programming Language :: Python :: 3 :: Only&quot;,
-    &quot;Topic :: Scientific/Engineering :: Mathematics&quot;,
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Scientific/Engineering :: Mathematics",
 ]
 dependencies = []
 
 [project.optional-dependencies]
 dev = [
-    &quot;pytest&gt;=7.0&quot;,
-    &quot;black&quot;,
-    &quot;mypy&quot;,
+    "pytest&gt;=7.0",
+    "black",
+    "mypy",
 ]
 
 [project.urls]
-Homepage = &quot;https://ampfinity.pages.dev/nza-paper&quot;
-Repository = &quot;https://github.com/super-morphist-sukezo/nza-arithmetic&quot;
-Documentation = &quot;https://nza-arithmetic.readthedocs.io&quot;
-&quot;Paper (HTML)&quot; = &quot;https://github.com/super-morphist-sukezo/nza-arithmetic/blob/main/docs/nza-full-thesis-v4_super-morphist-sukezo.md&quot;
-Thesis = &quot;https://arxiv.org/abs/placeholder&quot;  # later
+Homepage = "https://ampfinity.pages.dev/nza-paper"
+Repository = "https://github.com/super-morphist-sukezo/nza-arithmetic"
+Documentation = "https://nza-arithmetic.readthedocs.io"
+"Paper (HTML)" = "https://github.com/super-morphist-sukezo/nza-arithmetic/blob/main/docs/nza-full-thesis-v4_super-morphist-sukezo.md"
+Thesis = "https://arxiv.org/abs/placeholder"  # later
 
 [tool.hatch.version]
-path = &quot;src/nza/__init__.py&quot;
+path = "src/nza/__init__.py"
 
 [tool.hatch.build.targets.sdist]
 include = [
-    &quot;src/nza&quot;,
-    &quot;README.md&quot;,
-    &quot;LICENSE&quot;,
+    "src/nza",
+    "README.md",
+    "LICENSE",
 ]
 
 [tool.hatch.build.targets.wheel]
-packages = [&quot;src/nza&quot;]
+packages = ["src/nza"]
